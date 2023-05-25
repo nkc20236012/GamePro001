@@ -27,6 +27,10 @@ public class EnemyController : MonoBehaviour
             director.GetComponent<GameDirector>().damage();
             Destroy(gameObject);
         }
+        if(collision.gameObject.tag == "Shot")
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //[SerializeField] public float minX = -4;
+    //[SerializeField] public float maxX = 4;
+    //[SerializeField] public float minY = -10;
+    //[SerializeField] public float maxY = 10;
+
     Animator PlayerAnime;
     void Start()
     {
@@ -20,12 +25,22 @@ public class PlayerController : MonoBehaviour
         PlayerAnime.SetFloat("UP",y);
 
 
-            
-
-        
 
 
+            //var pos = transform.position;
+            //pos.x = Mathf.Clamp(pos.x, minX, maxX);
+            //pos.y = Mathf.Clamp(pos.y, minY, maxY);
+
+            //transform.position = pos;
+
+
+
+
+
+
+
+
+
+        }
 
     }
-
-}

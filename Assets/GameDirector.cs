@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameDirector : MonoBehaviour
 {
     GameObject en;
@@ -23,6 +24,11 @@ public class GameDirector : MonoBehaviour
     {
         time -= Time.deltaTime;
         en.GetComponent<Image>().fillAmount -= 1.0f / Cnt * Time.deltaTime;
-        Debug.Log(time);
+       // Debug.Log(time);
+
+        //if(time == 0)
+        //{
+        //    SceneManager.LoadScene()
+        //}
     }
 }
