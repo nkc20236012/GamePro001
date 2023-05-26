@@ -6,6 +6,9 @@ public class ShotGenarator : MonoBehaviour
 {
     GameObject player;
     public GameObject ShotPrefab;
+    bool buttonPressed = false;
+    float timer = 0f;
+    float interval = 0.5f;
     void Start()
     {
         player = GameObject.Find("Player");
@@ -15,11 +18,27 @@ public class ShotGenarator : MonoBehaviour
     {
         if(Input.GetButton("Jump"))
         {
-            
-            GameObject go = Instantiate(ShotPrefab);
-            go.transform.position = player.transform.position;
+            buttonPressed = true;
+            //GameObject go = Instantiate(ShotPrefab);
+            //go.transform.position = player.transform.position;
 
         }
         Debug.Log(player.transform.position);
+    }
+    private void FixedUpdate()
+    {
+        timer += Time.fixedDeltaTime;
+        if(timer >= interval)
+        {
+            timer = 0f;
+
+            if(buttonPressed)
+            {
+                GameObject go = Instantiate(ShotPrefab);
+                go.transform.position = player.transform.position;
+
+            }
+            buttonPressed = false;
+        }
     }
 }
