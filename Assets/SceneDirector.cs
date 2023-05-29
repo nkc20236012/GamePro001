@@ -12,6 +12,9 @@ public class SceneDirector : MonoBehaviour
 
     void Update()
     {
-        
+        if(Input.GetButtonDown("Fire1"))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }

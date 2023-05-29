@@ -23,7 +23,6 @@ public class ShotGenarator : MonoBehaviour
             //go.transform.position = player.transform.position;
 
         }
-        Debug.Log(player.transform.position);
     }
     private void FixedUpdate()
     {
