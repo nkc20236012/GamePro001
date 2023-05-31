@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class Strong : MonoBehaviour
 {
-    public static int enemycnt = 0;
+    int destroycnt;
     void Start()
     {
         
+    }
 
-}
-
-void Update()
+    void Update()
     {
         transform.Translate(-0.03f, 0, 0);
 
@@ -19,7 +18,7 @@ void Update()
         {
             Destroy(gameObject);
         }
-        
+
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,18 +28,18 @@ void Update()
             director.GetComponent<GameDirector>().damage();
             Destroy(gameObject);
         }
-        if(collision.gameObject.tag == "Shot")
+        if (collision.gameObject.tag == "Shot")
         {
-            Destroy(gameObject);
-            enemycnt++;
-            Debug.Log(enemycnt);
+            destroycnt++;
+            if(destroycnt ==3 )
+            {
+                Destroy(gameObject);
+
+            }
         }
-        if(collision.gameObject.tag == "ultTag")
+        if (collision.gameObject.tag == "ultTag")
         {
             Destroy(gameObject);
         }
     }
-
 }
-
-

@@ -549,6 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 5299888048920609097, guid: 246f827d9b843374a8fc05131a9582bf, type: 3}
+  strongPre: {fileID: 3321048036589784271, guid: 428d715a29ca7b24ca1b4d04b1726634, type: 3}
 --- !u!4 &546045715
 Transform:
   m_ObjectHideFlags: 0
@@ -966,3 +967,4 @@ MonoBehaviour:
   hisatu9Pre: {fileID: 8951546347756506453, guid: e8ea6e2c7d9644c488475c1cb2a32b41, type: 3}
   chargeTime: 1.5
   enemyController: {fileID: 0}
+  ShotUlt: {fileID: 0}

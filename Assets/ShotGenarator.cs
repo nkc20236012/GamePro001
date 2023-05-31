@@ -15,8 +15,13 @@ public class ShotGenarator : MonoBehaviour
     float interval = 0.5f;
     public float chargeTime =2f;
     public EnemyController enemyController;
+    public shot3 ShotUlt;
+    float ultckeck;
     int Killcnt;
-    float ultTime = 0f;
+     float ultTime = 0f;
+    float delta;
+    float span = 0.5f;
+    float c;
 
     void Start()
     {
@@ -26,11 +31,13 @@ public class ShotGenarator : MonoBehaviour
 
     }
 
+
     void Update()
     {
         Killcnt = EnemyController.enemycnt;
+        ultckeck = shot3.ultbom;
 
-        Debug.Log(Killcnt);
+        //Debug.Log(Killcnt);
         if(Input.GetButton("Fire1"))
         {
             buttonPressed = true;
@@ -59,26 +66,36 @@ public class ShotGenarator : MonoBehaviour
         }
         if (Killcnt >= 15)
         {
-            if (Input.GetButton("Fire3"))
-            {
-                GameObject ult = Instantiate(hisatuPre);
-                ult.transform.position = player.transform.position;
+        if (Input.GetButton("Fire3"))
+          {
+                
+             GameObject ult = Instantiate(hisatuPre);
+             ult.transform.position = player.transform.position;
               
 
-                EnemyController.enemycnt = 0;
+              EnemyController.enemycnt = 0;
+           }
+        }
+        if (ultckeck > 0.5f)
+        {
+                GameObject bom = Instantiate(hisatu9Pre);
+                float py = Random.Range(-4, 4);
+            float px = Random.Range(0, 11);
+                bom.transform.position = new Vector2(px, py);
+            ultTime += Time.deltaTime;
+            if(ultTime >0.5f)
+            {
+                shot3.ultbom = 0;
             }
+            
+            
+
         }
 
 
     }
 
-    public void Hisatu()
-    {
-        GameObject bom = Instantiate(hisatu9Pre);
-       int px = Random.Range(-7, 10);
-        int py = Random.Range(-4, 4);
-        bom.transform.position = player.transform.position * new Vector2(px,py);
-    }
+
     private void FixedUpdate()
     {
         timer += Time.fixedDeltaTime;
