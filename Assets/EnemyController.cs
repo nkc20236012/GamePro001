@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public static int enemycnt = 0;
     void Start()
     {
         
-    }
 
-    void Update()
+}
+
+void Update()
     {
         transform.Translate(-0.03f, 0, 0);
 
@@ -30,6 +32,10 @@ public class EnemyController : MonoBehaviour
         if(collision.gameObject.tag == "Shot")
         {
             Destroy(gameObject);
+            enemycnt++;
+            Debug.Log(enemycnt);
+
+
         }
     }
 

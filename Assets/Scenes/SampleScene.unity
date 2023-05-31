@@ -961,3 +961,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShotPrefab: {fileID: 1070530814406112911, guid: fa4dd068ec0c2d04bab3614b6b5a3bf9, type: 3}
+  Shot2Pre: {fileID: 8522143082095506600, guid: 9dbff1f87a4d1204babac12bc28e4d99, type: 3}
+  hisatuPre: {fileID: 7509449791988758007, guid: aa78d10de955c3a46af79829209e126f, type: 3}
+  hisatu9Pre: {fileID: 8951546347756506453, guid: e8ea6e2c7d9644c488475c1cb2a32b41, type: 3}
+  chargeTime: 1.5
+  enemyController: {fileID: 0}

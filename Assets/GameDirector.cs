@@ -7,15 +7,16 @@ public class GameDirector : MonoBehaviour
 {
     GameObject en;
     float time = 100.0f;
-    Text Km;
-    GameObject score;
+    float a = 0;
+    GameObject Km;
     [SerializeField]
     float Cnt;
 
     void Start()
     {
-        score = GameObject.Find("km");
-        Km = GetComponent<Text>();
+        Application.targetFrameRate = 60;
+
+        Km = GameObject.Find("km");
         en = GameObject.Find("Time");
 
     }
@@ -29,9 +30,14 @@ public class GameDirector : MonoBehaviour
 
     void Update()
     {
+
+        a += 1;
+        //Debug.Log(a);
+        Km.GetComponent<Text>().text = a.ToString("00000000") + "km";
+
         time -= Time.deltaTime;
         en.GetComponent<Image>().fillAmount -= 1.0f / Cnt * Time.deltaTime;
-        Debug.Log(time);
+        //Debug.Log(time);
         if(time < 0)
         {
             SceneManager.LoadScene("TitlScene");
