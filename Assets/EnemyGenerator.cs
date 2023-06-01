@@ -33,17 +33,17 @@ public class EnemyGenerator : MonoBehaviour
 
             go.transform.position = new Vector3(12, y, 0);
         }
-        if (delta > span2)
-        {
-            span2 = 0;
-            d = Random.Range(0.5f, 1f);
-            r = Random.Range(4.5f, -4.5f);
-            span2 = d;
-            delta = 0;
-            GameObject go = Instantiate(strongPre);
+        //if (delta > span2)
+        //{
+        //    span2 = 0;
+        //    d = Random.Range(0.5f, 1f);
+        //    r = Random.Range(4.5f, -4.5f);
+        //    span2 = d;
+        //    delta = 0;
+        //    GameObject go = Instantiate(strongPre);
 
-            go.transform.position = new Vector3(12, r, 0);
-        }
+        //    go.transform.position = new Vector3(12, r, 0);
+        //}
 
     }
 }

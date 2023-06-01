@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6424695016453886236}
   m_Layer: 0
   m_Name: Shot2Pre
-  m_TagString: Shot
+  m_TagString: chargeTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

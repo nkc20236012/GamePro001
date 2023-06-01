@@ -41,5 +41,9 @@ public class Strong : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if(collision.gameObject.tag == "chargeTag")
+        {
+            Destroy(gameObject);
+        }
     }
 }

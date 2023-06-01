@@ -19,7 +19,8 @@ void Update()
         {
             Destroy(gameObject);
         }
-        
+
+
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,12 +34,17 @@ void Update()
         {
             Destroy(gameObject);
             enemycnt++;
-            Debug.Log(enemycnt);
+            //Debug.Log(enemycnt);
         }
         if(collision.gameObject.tag == "ultTag")
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.tag == "chargeTag")
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 }

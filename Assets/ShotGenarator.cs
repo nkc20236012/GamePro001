@@ -64,33 +64,40 @@ public class ShotGenarator : MonoBehaviour
             }
 
         }
-        if (Killcnt >= 15)
+        if (EnemyController.enemycnt >= 15)
         {
         if (Input.GetButton("Fire3"))
           {
-                
-             GameObject ult = Instantiate(hisatuPre);
-             ult.transform.position = player.transform.position;
-              
 
-              EnemyController.enemycnt = 0;
+                GameObject ult = Instantiate(hisatuPre);
+             ult.transform.position = player.transform.position;
+
+                Debug.Log("aa");
+                EnemyController.enemycnt = 0;
+                Debug.Log("ii");
+                
            }
         }
         if (ultckeck > 0.5f)
         {
-                GameObject bom = Instantiate(hisatu9Pre);
-                float py = Random.Range(-4, 4);
+            GameObject bom = Instantiate(hisatu9Pre);
+            float py = Random.Range(-4, 4);
             float px = Random.Range(0, 11);
-                bom.transform.position = new Vector2(px, py);
+            bom.transform.position = new Vector2(px, py);
             ultTime += Time.deltaTime;
-            if(ultTime >0.5f)
+            if (ultTime > 0.5f)
             {
                 shot3.ultbom = 0;
             }
-            
-            
+
+
 
         }
+        Debug.Log(EnemyController.enemycnt);
+        Debug.Log(Killcnt);
+
+
+
 
 
     }

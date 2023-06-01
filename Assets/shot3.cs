@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class shot3 : MonoBehaviour
 {
-    public ShotGenarator shotGen;
     public static float ultbom = 0;
-    float ultDestroy;
     
     void Start()
     {

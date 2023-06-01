@@ -14,7 +14,7 @@ public class bom : MonoBehaviour
     {
         bomTime += Time.deltaTime;
 
-        if(bomTime > 1f)
+        if(bomTime > 1.5f)
         {
             Destroy(gameObject);
         }
