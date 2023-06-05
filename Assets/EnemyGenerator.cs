@@ -25,7 +25,7 @@ public class EnemyGenerator : MonoBehaviour
         if(delta > span)
         {
             span = 0;
-            c = Random.Range(0.5f,1f);
+            c = Random.Range(0.2f,0.8f);
             y = Random.Range(4.5f, -4.5f);
             span = c;
             delta = 0;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public static int enemycnt = 0;
+    public float speed = 0;
     void Start()
     {
         
@@ -13,7 +14,7 @@ public class EnemyController : MonoBehaviour
 
 void Update()
     {
-        transform.Translate(-0.03f, 0, 0);
+        transform.Translate(-speed, 0, 0);
 
         if (transform.position.x < -12)
         {
